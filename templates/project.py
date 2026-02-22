@@ -3,8 +3,8 @@
 intro_templates = [
     "Hi, I'm {name}, and I recently worked on an exciting project in {domain}.",
     "I'm {name}, and one of the projects I'm most excited about is in {domain}.",
-    "As someone passionate about {domain}, I built a project that reflects my technical and problem-solving skills.",
-    "Recently, I developed a project in {domain} that challenged me to think critically and build efficiently.",
+    "As someone passionate about {domain}, I built a project that reflects my technical and problem-solving skills - Hi, I'm {name}.",
+    "Recently, I developed a project in {domain} that challenged me to think critically and build efficiently - Hi, I'm {name}.",
     "{name} here — I'd like to share a project I built in the field of {domain}."
 ]
 
