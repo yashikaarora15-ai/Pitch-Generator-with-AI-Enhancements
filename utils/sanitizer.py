@@ -33,9 +33,14 @@ def fix_punctuation(text):
 
 
 # -------------------------------------------------
-# 4️⃣ Normalize important tech words
+# Normalize important tech words
 # -------------------------------------------------
 def normalize_tech_terms(text):
+    # Fix common slash combinations first
+    text = re.sub(r'\bai\s*/\s*ml\b', 'AI/ML', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bml\s*/\s*ai\b', 'ML/AI', text, flags=re.IGNORECASE)
+
+    # Fix standalone tech words
     replacements = {
         r'\bai\b': 'AI',
         r'\bml\b': 'ML',
@@ -49,23 +54,23 @@ def normalize_tech_terms(text):
 
     return text
 
-
 # -------------------------------------------------
-# 5️⃣ Capitalize 
+#  Capitalize 
 # -------------------------------------------------
 def capitalize_sentences(text):
     sentences = re.split(r'(?<=[.!?])\s+', text)
-    formatted = []
 
+    capitalized = []
     for s in sentences:
         if s:
-            formatted.append(s[0].upper() + s[1:])
+            capitalized.append(s[0].upper() + s[1:])
         else:
-            formatted.append(s)
+            capitalized.append(s)
 
-    return " ".join(formatted)
+    return " ".join(capitalized)
+
 # -------------------------------------------------
-# 6️⃣ Final Pitch Sanitizer
+# Final Pitch Sanitizer
 # -------------------------------------------------
 def sanitize_pitch(text):
     text = fix_articles(text)
