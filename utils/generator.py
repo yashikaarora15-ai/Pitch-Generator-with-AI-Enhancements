@@ -169,9 +169,7 @@ def generate_business_pitch(data):
 
     cta = random.choice(business.cta_templates)
 
-    return f"{hook} {intro} {audience} {problem} {solution} {uniqueness} {benefit} {cta}"
-
-
+    return f"{hook} {intro} {audience} {problem} {solution} {uniqueness} {cta}"
 #------------------------------------------------------------------------------------------
 # Network/Bio
 #------------------------------------------------------------------------------------------
