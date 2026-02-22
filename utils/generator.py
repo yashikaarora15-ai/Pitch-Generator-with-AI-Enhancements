@@ -167,8 +167,6 @@ def generate_business_pitch(data):
 
     uniqueness = random.choice(business.uniqueness_templates)
 
-    benefit = random.choice(business.benefit_templates)
-
     cta = random.choice(business.cta_templates)
 
     return f"{hook} {intro} {audience} {problem} {solution} {uniqueness} {benefit} {cta}"
