@@ -51,14 +51,19 @@ def normalize_tech_terms(text):
 
 
 # -------------------------------------------------
-# 5️⃣ Capitalize first letter of each sentence only
+# 5️⃣ Capitalize 
 # -------------------------------------------------
 def capitalize_sentences(text):
     sentences = re.split(r'(?<=[.!?])\s+', text)
-    sentences = [s.capitalize() for s in sentences]
-    return " ".join(sentences)
+    formatted = []
 
+    for s in sentences:
+        if s:
+            formatted.append(s[0].upper() + s[1:])
+        else:
+            formatted.append(s)
 
+    return " ".join(formatted)
 # -------------------------------------------------
 # 6️⃣ Final Pitch Sanitizer
 # -------------------------------------------------
