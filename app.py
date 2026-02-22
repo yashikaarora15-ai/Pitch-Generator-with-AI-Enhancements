@@ -46,10 +46,30 @@ Pitch Generator
 # ---------------------------------
 # Category Selection
 # ---------------------------------
-category = st.selectbox(
+category_display = st.selectbox(
     "Select Pitch Type",
-    ["internship", "job", "project", "presentation", "freelancer", "business", "networking"]
+    [
+        "Internship",
+        "Job",
+        "Project Showcase",
+        "Freelancing",
+        "Business / Startups",
+        "Networking / Bio",
+        "Presentation"
+    ]
 )
+
+category_map = {
+    "Internship": "internship",
+    "Job": "job",
+    "Project Showcase": "project",
+    "Freelancing": "freelancer",
+    "Business / Startups": "business",
+    "Networking / Bio": "networking",
+    "Presentation": "presentation"
+}
+
+category = category_map[category_display]
 
 # ---------------------------------
 # Category-Based Inputs
